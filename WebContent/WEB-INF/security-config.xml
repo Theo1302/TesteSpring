@@ -1,0 +1,55 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+  xmlns:beans="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/security
+           http://www.springframework.org/schema/security/spring-security.xsd">
+
+
+<http pattern="/index.jsp*" security="none"/>
+<http pattern="/resources/**" security="none" />
+
+
+
+<authentication-manager>
+	<authentication-provider>
+		<user-service>
+			<user name="admin" password="12345" authorities="ROLE_USER, ROLE_ADMIN" />
+			<user name="user" password="123" authorities="ROLE_USER" />
+		</user-service>
+	</authentication-provider>
+</authentication-manager>
+
+
+
+
+
+
+<!--  
+	<global-method-security secured-annotations="enabled" />
+	<http pattern="/login.jsp" security="none" />
+	<http pattern="/403.jsp" security="none" />
+	<http pattern="/resources/**" security="none" />
+	<http pattern="/recuperarSenha" security="none" />
+	<http pattern="/redefinirSenha" security="none" />
+	<http pattern="/formRedefinirSenha" security="none" />
+	<http pattern="incluirDoencaCompulsoriaImediataWS" security="none" />
+	<http auto-config="true" use-expressions="true">
+		<intercept-url pattern="/welcome*" access="isAuthenticated()" />
+		<intercept-url pattern="/pages/private/**" access="isAuthenticated()" />
+		<intercept-url pattern="/**" access="isAuthenticated()" />
+
+		<form-login login-page="/login.jsp" default-target-url="/"
+			authentication-failure-url="/login.jsp?erroAutenticacao=true" />
+
+		<logout logout-success-url="/login.jsp" delete-cookies="true" />
+		<access-denied-handler error-page="/403.jsp" />
+	</http>
+
+	<authentication-manager>
+		<authentication-provider user-service-ref="usuarioDAO">
+			<password-encoder hash="sha" />
+		</authentication-provider>
+	</authentication-manager>-->
+</beans:beans>
