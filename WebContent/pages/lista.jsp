@@ -8,7 +8,7 @@
 <title>Escola</title>
 </head>
 <body>
-		Nome : <label>${aluno.nome}</label> 
+		
 
 
 </body>

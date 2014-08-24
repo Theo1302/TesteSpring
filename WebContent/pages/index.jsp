@@ -11,44 +11,29 @@
 <title>Escola</title>
 </head>
 <body>
-	<!-- <dir class="row-fluid">
-		<form:form method="post" commandName="aluno" action="inserirAluno">	
+
+asdfhsdfhasdlkjfhalsjkdf<button >asdfasdas</button>
+
+	<!-- <dir class="row-fluid">	<form:form method="post" commandName="aluno" action="inserirAluno">	
 						Nome Aluno
 						<form:input path="nome" />
 					
 						Nome Mae
 						<form:input path="nomeMae" />
 			<button type="submit" class="btn btn-default">Salvar</button>
-		</form:form>
+		</form:form> -->
 
 
 
 
-		<h2>Página de Login das Tarefas</h2>
+			<!-- <h2>Página de Login das Tarefas</h2>
 		<form action="efetuaLogin" method="post">
 			Login: <input type="text" name="login" /> <br /> Senha: <input
 				type="password" name="senha" /> <br /> <input type="submit"
 				value="Entrar nas tarefas" />
 		</form> -->
+		
 
-
-
-
-	<div class="col-md-3">
-		<div class="wrapper">
-			<form class="form-signin">
-				<h2 class="form-signin-heading" align="center">Acesso</h2>
-				<input type="text" class="form-control" name="username"
-					placeholder="Nome do Usuario" required="" autofocus="" /> <input
-					type="password" class="form-control" name="password"
-					placeholder="Senha" required="" /> <input type="checkbox"
-					value="remember-me" id="rememberMe" name="rememberMe" class="chk"><label
-					for="rememberMe">Remember me </label> <label><a
-					align="center" href="">Esqueceu o seu usuário ou senha?</a></label>
-				<button class="btn btn-lg btn-primary btn-block" type="submit">Acesso</button>
-			</form>
-			</div>
-	</div>
 
 
 
