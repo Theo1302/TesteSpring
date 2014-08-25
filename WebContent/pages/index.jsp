@@ -11,7 +11,7 @@
 </head>
 <body>
 
-Pagina Principal Bem vindo<button >LOL</button>
+Pagina Principal Bem vindo <a href="lista"> Listar</a>
 
 	<!-- <dir class="row-fluid">	<form:form method="post" commandName="aluno" action="inserirAluno">	
 						Nome Aluno

@@ -39,15 +39,16 @@ public class Principal {
 		return "index";
 	}
 
-	/*
-	 * 
-	 * @RequestMapping(value = "/inserirAluno", method = RequestMethod.POST) public ModelAndView
-	 * add(@ModelAttribute("aluno") Aluno aluno, BindingResult result, HttpServletRequest request,
-	 * RedirectAttributes redirect) { new AlunoDao().save(aluno); ModelAndView model = new
-	 * ModelAndView("lista"); model.addObject("aluno.nome", aluno.getNome()); return model; }
-	 * 
-	 * /** Upload single file using Spring Controller
-	 */
+
+
+	@RequestMapping(value = {"/lista"}, method = RequestMethod.GET)
+	public ModelAndView add() {
+
+		return new ModelAndView("private/lista");
+	}
+
+	/** Upload single file using Spring Controller */
+
 	@RequestMapping(value = "/uploadFile", method = RequestMethod.POST)
 	public @ResponseBody
 	String uploadFileHandler(@RequestParam("name") String name, @RequestParam("file") MultipartFile file) {

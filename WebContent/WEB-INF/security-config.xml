@@ -14,22 +14,25 @@
 			
 		   <!--Retira as Restrição de segurança para essas chamadas  -->
 	       <http pattern="/pages/index.jsp*" security="none"/> 
-	       <http pattern="/pages/public/login.jsp*" security="none"/> 
+	       <http pattern="/pages/login.jsp*" security="none"/> 
 		   <http pattern="/resources/**" security="none" />
 
 
 <http auto-config="true" use-expressions="true">
-	<intercept-url pattern="/pages/**" access="isAuthenticated()" />
+	<intercept-url pattern="/pages/private/**" access="isAuthenticated()" />
 	<intercept-url pattern="/**" access="isAuthenticated()" />
 	<form-login 
 	
-		login-page='/pages/public/login.jsp' 
+		login-page='/pages/login.jsp' 
 		
 		
 		default-target-url="/pages/index.jsp"
 		
 		authentication-failure-url="/login.html?error=true" />
-	<logout />
+	<logout delete-cookies="JSESSIONID" />
+	
+	<remember-me key="uniqueAndSecret" token-validity-seconds="86400"/>
+	
 </http>
 
 
